@@ -1,3 +1,5 @@
-npm install express
-npm install --save-dev nodemon 
-npm install morgan
+npm install express # json parse middleware
+npm install --save-dev nodemon # auto restart for dev
+npm install morgan # log middleware
+npm install cors
+npm install mongoose # mongdb api
