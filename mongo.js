@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 if (process.argv.length < 3) {
 	console.log("Please provide the password as an argument: node mongo.js <password>");
@@ -7,7 +8,7 @@ if (process.argv.length < 3) {
 
 const password = process.argv[2];
 
-const url = `mongodb+srv://seek:${password}@cluster0.et1pi4j.mongodb.net/?retryWrites=true&w=majority`;
+const url = process.env.MONGODB_URI;
 
 const personSchema = new mongoose.Schema({
 	name: String,
