@@ -7,7 +7,7 @@
 		"build": "",
 		"start": "node index.js",
 		"dev": "nodemon index.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest --verbose",
 		"build:ui": "rm -rf build && cd /Users/root1/Github/Full_Stack_open_2022_Exercises/part2/part2-notes && npm run build && cp -r build /Users/root1/Github/-part3-phonebook-backend",
 		"deploy": "fly deploy",
 		"deploy:full": "npm run build:ui && npm run deploy",
@@ -37,5 +37,8 @@
 		"eslint": "^8.29.0",
 		"nodemon": "^2.0.20",
 		"webpack-cli": "^5.0.0"
+	},
+	"jest": {
+		"testEnvironment": "node"
 	}
 }
